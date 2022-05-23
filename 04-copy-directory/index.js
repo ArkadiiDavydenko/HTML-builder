@@ -1,4 +1,3 @@
-const fs = require('fs');
 const path = require('path');
 const fsProm = require('fs/promises');
 const mainFolderPath = path.join(__dirname, 'files');
