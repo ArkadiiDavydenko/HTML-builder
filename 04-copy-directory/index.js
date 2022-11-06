@@ -1,8 +1,8 @@
 const path = require('path');
-const fsProm = require('fs/promises');
 const mainFolderPath = path.join(__dirname, 'files');
 const copyFolderPath = path.join(__dirname, 'files-copy');
 
+const fsProm = require('fs/promises');
 
 async function copyDir(mainDir, copyDir) {
   await fsProm.mkdir(copyDir, {recursive: true});
@@ -16,7 +16,6 @@ async function copyDir(mainDir, copyDir) {
   const files = await fsProm.readdir(mainFolderPath);
 
   for (let file of files) {
-    // console.log(file)
     await fsProm.copyFile(`${mainFolderPath}/${file}`, `${copyFolderPath}/${file}`);
   }
 
