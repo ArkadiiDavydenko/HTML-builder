@@ -1,13 +1,16 @@
 const fs = require('fs');
 const path = require('path');
 const fsProm = require('fs/promises');
+
 const styleFilesPath = path.join(__dirname, 'styles');
 const mainHtmlPath = path.join(__dirname, 'template.html');
 const mainFolderPath = path.join(__dirname, 'assets');
 const componentsPath = path.join(__dirname, 'components');
 const projectFolderPath = path.join(__dirname, 'project-dist');
+
 const copyFolderPath = path.join(projectFolderPath, 'assets');
 const htmlPath = path.join(projectFolderPath, 'index.html');
+
 
 async function cleanBundleFolder(pathBundle) {
     await fsProm.rm(pathBundle, {recursive: true, force: true});
