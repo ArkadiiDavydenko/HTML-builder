@@ -4,7 +4,9 @@ const way = path.join(__dirname, 'text.txt');
 const readline  = require('readline');
 const process = require('process');
 const { stdin: input, stdout: output } = require('process');
+
 const rl = readline.createInterface({ input, output });
+
 let writeStream = fs.createWriteStream(way);
 
 console.log('Please, enter your text.')
