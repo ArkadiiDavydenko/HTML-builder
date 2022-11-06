@@ -11,12 +11,12 @@ function readDir(filePath) {
         if (err) console.log(err);
 
         files.forEach((file) => {
-            // console.log(file)
+
             const currentPath = path.join(filePath, file);
-            // console.log(currentPath)
+
 
             fs.lstat(currentPath, (err, stat) => {
-                // console.log(stats)
+
                 if (err) return console.log(err);
 
                 if (stat.isFile()) {
